@@ -23,6 +23,8 @@ const inorderTraversal = function(troot) {
   }
 
   traverse(troot);
+
+  return out;
 }
 
 console.log(inorderTraversal(troot));
