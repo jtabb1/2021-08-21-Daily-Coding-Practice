@@ -1,16 +1,16 @@
 /* This is in-order traversal for a binary tree */
 
 function TreeNode(value,left,right) {
-  value===undefined ? 0 : value;
-  left===undefined ? null : left;
-  right===undefined ? null : right;
+  this.value = value===undefined ? 0 : value;
+  this.left = left===undefined ? null : left;
+  this.right = right===undefined ? null : right;
 }
 
 // make so that it fits on phone 
 // portrait mode
 
 
-troot = TreeNode(1,null,TreeNode(2,TreeNode(3,null,null),null);
+troot = new TreeNode(1,null,new TreeNode(2,new TreeNode(3,null,null),null));
 
 const inorderTraversal = function(troot) {
   const out = [];
@@ -19,8 +19,10 @@ const inorderTraversal = function(troot) {
     if(troot===null) return;
     traverse(troot.left);
     out.push(troot.value);
-    traverse(troot.right)
+    traverse(troot.right);
   }
 
   traverse(troot);
 }
+
+console.log(inorderTraversal(troot));
